@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reserve Flight</title>
+</head>
+<body>
+    <h2>Reserve Flight</h2>
+    <p>Flight Number: <%= flight.flightNumber %></p>
+    <p>Airline: <%= flight.operatingAirlines %></p>
+    <p>Departure City: <%= flight.departureCity %></p>
+    <p>Arrival City: <%= flight.arrivalCity %></p>
+    <p>Departure Date: <%= flight.dateOfDeparture %></p>
+    <p>Price: $<%= flight.price.toFixed(2) %></p>
+
+    <form action="/reserve" method="post">
+        <input type="hidden" name="flightId" value="<%= flight.id %>">
+        <label for="passengerId">Passenger ID:</label>
+        <input type="number" id="passengerId" name="passengerId" required>
+        <br>
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required>
+        <br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" value="<%= flight.price %>" readonly>
+        <br>
+        <button type="submit">Confirm Reservation</button>
+    </form>
+</body>
+</html>
