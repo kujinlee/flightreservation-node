@@ -1,5 +1,7 @@
-const { DataTypes } = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
+
+console.log(sequelize instanceof Sequelize); // Should log `true`
 
 const Flight = sequelize.define('Flight', {
     id: { type: DataTypes.BIGINT, primaryKey: true, autoIncrement: true },

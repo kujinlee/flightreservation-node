@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const sequelize = require('./config/database');
 const flightRoutes = require('./routes/flightRoutes');
+require('./models'); // Ensure models and associations are initialized
 
 const app = express();
 

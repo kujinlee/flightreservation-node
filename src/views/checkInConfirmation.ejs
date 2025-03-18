@@ -4,7 +4,20 @@
     <title>Check-In Confirmation</title>
 </head>
 <body>
-    <h2>Check-In Confirmation</h2>
-    <p><%= msg %></p>
+    <h1>Check-In Confirmation</h1>
+    <p><strong>Message:</strong> <%= msg %></p>
+
+    <h2>Reservation Details</h2>
+    <p><strong>Reservation ID:</strong> <%= reservation.id %></p>
+    <p><strong>Number of Bags:</strong> <%= reservation.numberOfBags %></p>
+    <p><strong>Checked In:</strong> <%= reservation.checkedIn ? 'Yes' : 'No' %></p>
+
+    <h2>Flight Details</h2>
+    <p><strong>Flight Number:</strong> <%= flight.flightNumber %></p>
+    <p><strong>Operating Airlines:</strong> <%= flight.operatingAirlines %></p>
+    <p><strong>Departure City:</strong> <%= flight.departureCity %></p>
+    <p><strong>Arrival City:</strong> <%= flight.arrivalCity %></p>
+    <p><strong>Date of Departure:</strong> <%= flight.dateOfDeparture %></p>
+    <p><strong>Estimated Departure Time:</strong> <%= flight.estimatedDepartureTime %></p>
 </body>
 </html>
