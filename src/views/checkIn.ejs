@@ -9,7 +9,7 @@
     <p>Flight ID: <%= reservation.flightId %></p>
     <p>Passenger ID: <%= reservation.passengerId %></p>
 
-    <form action="/completeCheckIn" method="post">
+    <form action="<%= BASE_URL %>/completeCheckIn" method="post">
         <input type="hidden" name="reservationId" value="<%= reservation.id %>">
         <label for="numberOfBags">Number of Bags:</label>
         <input type="number" id="numberOfBags" name="numberOfBags" required>

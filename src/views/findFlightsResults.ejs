@@ -30,7 +30,7 @@
                         <td><%= flight.estimatedDepartureTime %></td>
                         <td>$<%= flight.price.toFixed(2) %></td>
                         <td>
-                            <form action="/reserve" method="get">
+                            <form action="<%= BASE_URL %>/reserve" method="get">
                                 <input type="hidden" name="flightId" value="<%= flight.id %>">
                                 <button type="submit">Reserve</button>
                             </form>

@@ -12,6 +12,6 @@
     <p>Card Number: <%= reservation.cardNumber %></p>
     <p>Reservation created successfully!</p>
 
-    <a href="/checkIn?reservationId=<%= reservation.id %>">Continue to Check-In</a>
+    <a href="<%= BASE_URL %>/checkIn?reservationId=<%= reservation.id %>">Continue to Check-In</a>
 </body>
 </html>
